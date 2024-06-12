@@ -1,6 +1,6 @@
 # 168 Final Report - Photon Mapping
 
-## Introduction/ Motivation or Hero Image
+## Introduction
 
 For our final project, we want to implement a photon mapping, which can produce caustic effects for underwater scene.
 
@@ -52,7 +52,7 @@ Even though the program can successfully produce some incorrect images, it may s
 
 To debug this out, we tried to add many print statement to track and trace back to where the values become weired, we also tried many different place and method to build the kd-tree. 
 
-## Some images we produced 
+## Some Images We Produced 
 
 Our photon mapping are make up with direct part and photonmapping part, below image is the water model with only direct color. 
 <img src="168_final_scene/only_direct.png" alt="failed1" width="250"/>
