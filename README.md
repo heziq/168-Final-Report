@@ -46,6 +46,8 @@ Then for every photon in the neighbor list, add their contribution to the total 
 
 Even though the program can successfully produce some incorrect images, it may still exist some memory problems. We find that when using the built kd-tree in `PhotonMapping.cpp`, the photon's position and power would unexpectedly change to some really some value (from $10^{-30} \space to \space 10^{-50}$ ). But we also have checked the position and power during building tree, they all looks good.
 
+To debug this out, we tried to add many print statement to track and trace back to where the values become weired, we also tried many different place and method to build the kd-tree. 
+
 ## Some images we produced 
 
 Our photon mapping are make up with direct part and photonmapping part, below image is the water model with only direct color. 
