@@ -17,7 +17,8 @@ by Benedikt Bitterli, using the `mesh001.obj`.
 We built this project base on code we have from hw4, things added: 
 - A new integrator called `PhotonMapping`, which is in `PhotonMapping.cpp`. 
 - An external lirary of kd-tree, from from [KDtree library](https://github.com/cdalitz/kdtree-cpp).(This part is in `kdtree.cpp` and `kdtree.hpp`)
-- `buildTree.cpp` and  `buildTree.h` is where we build our kdtree with photon mapping.  
+- `buildTree.cpp` and  `buildTree.h` is where we build our kdtree with photon mapping.
+- `Photon.h` is the class for photon. 
 
 1. Create Photon map, record it in a balanced kdtree
 2. Do pathtracing with global photon map
