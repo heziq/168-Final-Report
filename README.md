@@ -8,7 +8,7 @@ For our final project, we want to implement a photon mapping, which can produce 
 
 - The water model downloaded from [Rendering Resources](https://benedikt-bitterli.me/resources/), Water Caustic
 by Benedikt Bitterli, using the `mesh001.obj`.
-  - Below picture is the water model run with the pathtracer from hw4. 
+  - Below picture is the water model run with the pathtracer  from hw4, and with newly implemented snell's law. 
   - <img src="168_final_scene/water_model_with_pathtracer.png" alt="Water Model" width="250"/>
 - The cornell box model is the same as we used in HW4.
 
