@@ -14,6 +14,11 @@ by Benedikt Bitterli, using the `mesh001.obj`.
 
 ## Implementation
 
+We built this project base on code we have from hw4, things added: 
+- A new integrator called `PhotonMapping`, which is in `PhotonMapping.cpp`. 
+- An external lirary of kd-tree, from from [KDtree library](https://github.com/cdalitz/kdtree-cpp).(This part is in `kdtree.cpp` and `kdtree.hpp`)
+- `buildTree.cpp` and  `buildTree.h` is where we build our kdtree with photon mapping.  
+
 1. Create Photon map, record it in a balanced kdtree
 2. Do pathtracing with global photon map
 
@@ -28,9 +33,7 @@ And then we do photon trace, emit photons from light, after the first hit, decid
 - The first one is the method from `Siggraph 2000 Course 8`,using the coefficient of diffuse and sepcular of the hitMaterial to calculate the posibility of diffuse reflection and specular reflection, then using the RR. If it is specular reflection, calculate the reflected direction and update the power; if absorbed, just stop; if it is diffuse refection, record the information of the photon in the photon map, and also update position, direction and power, continue reflect photons until reach the maxdepth.
 - I also try to use the method we used in HW4, using a t value to decide which reflection it happend.
 
-After record all the information on the diffuse surface, create a kd-tree for the photon map.
-
-Here we used a kd-tree library downloaded from [KDtree library](https://github.com/cdalitz/kdtree-cpp).
+After record all the information on the diffuse surface, create a kd-tree using external library for the photon map.
 
 The above process is written in the file `buildTree.cpp`.
 
