@@ -8,6 +8,8 @@ For our final project, we want to implement a photon mapping, which can produce 
 
 - The water model downloaded from [Rendering Resources](https://benedikt-bitterli.me/resources/), Water Caustic
 by Benedikt Bitterli, using the `mesh001.obj`.
+  - Below picture is the water model run with the pathtracer from hw4. 
+  - <img src="168_final_scene/water_model_with_pathtracer.png" alt="Water Model" width="250"/>
 - The cornell box model is the same as we used in HW4.
 
 ## Implementation
@@ -43,4 +45,23 @@ Then for every photon in the neighbor list, add their contribution to the total 
 ## Possible Reason of Fail
 
 Even though the program can successfully produce some incorrect images, it may still exist some memory problems. We find that when using the built kd-tree in `PhotonMapping.cpp`, the photon's position and power would unexpectedly change to some really some value (from $10^{-30} \space to \space 10^{-50}$ ). But we also have checked the position and power during building tree, they all looks good.
+
+## Some images we produced 
+
+Our photon mapping are make up with direct part and photonmapping part, below image is the water model with only direct color. 
+<img src="168_final_scene/only_direct.png" alt="failed1" width="250"/>
+
+We've tried many different ways to debug this, but still fail, below are some attempts we have tried. 
+
+<p float="left">
+  <img src="168_final_scene/failed_attemp_4.png" alt="failed4" width="250" height="250"/>
+  <img src="168_final_scene/failed_attemp_6.png" alt="failed6" width="250" height="250"/>
+  <img src="168_final_scene/failed_attemp_2.png" alt="failed2" width="250" height="250"/>
+  <img src="168_final_scene/failed_attemp_5.png" alt="failed5" width="250" height="250"/>
+  <img src="168_final_scene/failed_attemp_7.png" alt="failed7" width="250" height="250"/>
+  <img src="168_final_scene/failed_attemp_1.png" alt="failed1" width="250" height="250"/>
+</p>
+
+
+
 
