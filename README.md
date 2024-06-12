@@ -44,7 +44,7 @@ Trace the ray though the scene, if it have a diffuse reflection, consider the co
 
 At this position where diffuse happen, use `k_nearest_neighbor` function in builtin `kdtree` library to find the k nearest photons of this position.
 
-Then for every photon in the neighbor list, add their contribution to the total output flux.
+Then for every photon in the neighbor list, add their contribution to the total output flux, and combine them with direct light contributions. 
 
 ## Possible Reason of Fail
 
